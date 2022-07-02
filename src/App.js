@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React,{useState, createContext} from 'react'
+import { BrowserRouter as Router} from "react-router-dom";
+import Nav from './Nav.js'
+import Header from './Header.js'
 import './App.css';
+import AnimatedRoute from './AnimatedRoute.js';
 
-function App() {
+export const AppContext = createContext(null);
+
+const App = () => {
+  const [modeMessage, setmodeMessage] = useState(true);
+  modeMessage?document.body.style = 'background-color: #ffffff;':document.body.style = 'background-color: #0e0b16;';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <AppContext.Provider value={{ modeMessage, setmodeMessage }}>
+      <Header/>
+      <Nav/>
+      <AnimatedRoute/>
+      </AppContext.Provider>
+    </Router>
+  )
 }
 
-export default App;
+export default App
