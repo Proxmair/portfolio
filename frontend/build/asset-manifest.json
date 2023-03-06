@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.45c573a2.css",
+    "main.js": "/static/js/main.21fa3cf1.js",
+    "static/media/Umair CV.pdf": "/static/media/Umair CV.619124aeda98693b0409.pdf",
+    "static/media/Promair_Icon_Color.png": "/static/media/Promair_Icon_Color.b61f656aa42c2f9228de.png",
+    "index.html": "/index.html",
+    "main.45c573a2.css.map": "/static/css/main.45c573a2.css.map",
+    "main.21fa3cf1.js.map": "/static/js/main.21fa3cf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45c573a2.css",
+    "static/js/main.21fa3cf1.js"
+  ]
+}
