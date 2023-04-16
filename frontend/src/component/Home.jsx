@@ -1,6 +1,6 @@
 import React from 'react'
 import {BsDownload} from 'react-icons/bs';
-import CV from '../assets/Umair CV.pdf'
+import CV from '../assets/UmairCV.pdf'
 const Home = () => {
   return (
     <div className='container'>
