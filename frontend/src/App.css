@@ -209,7 +209,7 @@ h3>span {
   background-color: rgb(13, 187, 187);
   border-radius: 10px;
   box-shadow: 0.5rem 0.5rem 0.375rem 0 rgb(13, 187, 187, 0.4);
-  margin: 3rem;
+  margin: 3rem 0;
   cursor: pointer;
   font-family: monospace;
   font-size: larger;
@@ -237,10 +237,6 @@ h3>span {
     transform: scale(1);
     box-shadow: 0.5rem 0.5rem 0.375rem 0 #ababab4d;
   }
-}
-
-.icon-conatiner>svg {
-  margin-left: 0.5rem;
 }
 
 /*--About--*/
@@ -820,6 +816,7 @@ h3>span {
 .socail-list {
   display: flex;
   height: 3rem;
+  gap: 15px;
   justify-content: space-around;
   align-items: center;
 }
@@ -915,6 +912,7 @@ h3>span {
 
   .socail-list {
     justify-content: flex-start;
+    gap: 3px;
   }
 
   .socail-list>li {
@@ -991,12 +989,17 @@ h3>span {
 @media screen and (max-width: 650px) {
 
   /*Layout*/
+  .container {
+    min-height: 100vh;
+    margin: 5rem 2rem 1rem 2rem;
+  }
+  
   h2 {
     font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 2.625rem;
+    font-size: 2rem;
     padding: 0.5rem 0rem 1rem 0rem;
   }
 
@@ -1245,4 +1248,14 @@ h3>span {
   .coin-shadow {
     margin: 0 0.5rem;
   }
+}
+
+
+.whatsapp-container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

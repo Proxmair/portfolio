@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { BsFacebook } from 'react-icons/bs';
+import { BsFacebook, BsWhatsapp } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 import { FaHackerrank } from 'react-icons/fa';
@@ -28,8 +28,7 @@ const Footer = ({ socials }) => {
           </ul>
         </div>
         <div className='contact-no'>
-          <h3><br /><a href={socials.whatsApp.url}>WhatsApp</a></h3>
-          <img src={socials.whatsApp.image} alt={'WhatsApp QR code'} />
+          <h3><br /><a className='whatsapp-container' href={socials.whatsApp.url}><p>Join on WhatsApp</p> <BsWhatsapp size={40} /></a></h3>
         </div>
       </div>
       <div><p>Copyright &copy; www.proxmair.com</p></div>
