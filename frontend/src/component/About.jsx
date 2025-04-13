@@ -1,11 +1,18 @@
 import React from 'react'
 const About = ({about}) => {
-  console.log(about)
+  console.log(about, 'about')
   return (
     <div className='container'>
       <h2>Get to Know</h2>
       <h1>About</h1>
-      <h3>{about.text}</h3>
+      <h3>
+        {about.text.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </h3>
       <div className='skills-container'>
         {about.list.map((item) => (
           <div key={item._id}>

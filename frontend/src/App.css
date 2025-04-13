@@ -241,8 +241,7 @@ h3>span {
 
 /*--About--*/
 
-.skills-container {
-  max-width: 45rem;
+.skills-container {  
   margin: 5rem 3rem;
   display: flex;
   flex-wrap: wrap;
@@ -345,12 +344,11 @@ h3>span {
 }
 
 .btn-submit {
-  height: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(rgb(0, 217, 255), rgb(27, 119, 194));
-  box-shadow: 0rem 0.5rem 1.5rem 0.25rem rgb(0, 217, 255, 0.5);
+  background-color: rgba(90, 177, 203, 0.877);
+  font-weight: bold;
   transition: all 0.25s ease;
 }
 
@@ -370,7 +368,7 @@ h3>span {
 .from-result {
   position: relative !important;
   top: 0rem;
-  animation: ContacthideUp 1s ease 3s 1 normal forwards;
+  animation: ContacthideUp 1s ease 0s 1 normal forwards;
   z-index: 1 !important;
 }
 
@@ -418,7 +416,7 @@ h3>span {
   margin: 1rem 0rem;
 }
 
-.work {
+/* .work {
   background-image: radial-gradient(rgb(14, 29, 53), black);
   box-shadow: 0rem 0.5rem 1.5rem 0.25rem rgb(207, 192, 192, 0.5);
   border-radius: 1rem;
@@ -427,6 +425,8 @@ h3>span {
   margin: 4rem 0;
   height: fit-content;
   min-height: 15rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .work>h2 {
@@ -443,15 +443,60 @@ h3>span {
 
 .work>p>span>a {
   color: rgb(90, 176, 203);
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: large;
 }
 
 .work>p>img {
   float: right;
   width: 10rem;
-  aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 0rem 0rem 2rem 2rem;
+} */
+.work {
+  background-image: radial-gradient(rgb(14, 29, 53), black);
+  box-shadow: 0rem 0.5rem 1.5rem 0.25rem rgb(207, 192, 192, 0.5);
+  border-radius: 1rem;
+  max-width: 100%;
+  padding: 1rem 3rem;
+  margin: 4rem 0;
+  height: fit-content;
+  min-height: 15rem;
+  display: flex;
+}
+.work > div > div > p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  color: rgb(207, 192, 192);
+  text-align: justify;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.work > div > div > a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(90, 176, 203);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+.work-image {
+  max-width: 10rem;
+  min-width: 10rem;
+  aspect-ratio: 1/1;
+  margin: auto;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.work-image>img {
+  width: 100%;
 }
 
 /*--Login--*/
@@ -984,6 +1029,17 @@ h3>span {
     display: none;
   }
 
+  /* --Work-- */
+  .work > div > div > p {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .work-image {
+    max-width: 7rem;
+    min-width: 7rem;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -1026,36 +1082,33 @@ h3>span {
   }
 
   .coin {
-    width: 5rem;
+    width: 4.3rem;
   }
 
   .coin>img {
-    width: 4rem;
+    width: 3.5rem;
   }
 
   .coin-shadow {
-    width: 5rem;
+    width: 4.3rem;
   }
 
   /*--Work--*/
 
-  .work>h2 {
+  .work{
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+
+  .work>div>h2 {
     text-align: center;
-    font-size: 1.6rem;
-    margin-left: -0.5rem;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
   }
 
-  .work>p {
+  .work>div>div>p,.work>div>div>a {
     font-size: 0.8rem;
-  }
-
-  .work>p {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .work>p>img {
-    margin: 0rem auto 1rem auto;
+    margin: 0;
   }
 
   /*--Header--*/
@@ -1154,7 +1207,7 @@ h3>span {
   .header-small {
     display: block;
     width: 20rem;
-    background-image: linear-gradient(black, rgba(90, 177, 203, 0.877));
+    background-image: linear-gradient(black, rgb(56, 120, 139));
     position: absolute;
     top: 5.25rem;
     right: 0rem;

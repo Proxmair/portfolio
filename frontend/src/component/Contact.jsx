@@ -3,17 +3,24 @@ import emailjs from '@emailjs/browser';
 import {AiOutlineSend} from 'react-icons/ai';
 const Contact = () => {
   const form =useRef();
-  const [resultDisplay, setresultDisplay] = useState('none')
+  const [resultDisplay, setresultDisplay] = useState('none');
+  const [isLoading, setisLoading] = useState(false);
   const contactFormHandler=(e)=>{
     e.preventDefault();
-    emailjs.sendForm('service_ioefads', 'template_k18rpwi', form.current, 'Em8fBmsEVCuKn56zo')
+    setisLoading(true);
+    emailjs.sendForm('service_8cww9td', 'template_k18rpwi', form.current, 'Em8fBmsEVCuKn56zo')
     .then((result) => {
-        console.log(result.text);
         setresultDisplay('block')
+        setTimeout(() => {
+          setresultDisplay('none')
+        }, 2000);
+        setisLoading(false);
+        e.target.reset();
     }, (error) => {
         console.log(error.text);
+        e.target.reset();
+        setisLoading(false);
     });
-    e.target.reset();
   }
   return (
     <div className='container'>
@@ -48,8 +55,8 @@ const Contact = () => {
           rows="10"
           name='message'
         ></textarea>
-        <button className='btn btn-submit' type='submit' >
-          <AiOutlineSend/>Send
+        <button disabled={isLoading} className={`btn btn-submit`} type='submit' >
+          {isLoading ? 'loading...' : <><AiOutlineSend/> Send</>}
         </button>
         </div>
         <div style={{display:`${resultDisplay}`}} className='from-result'>

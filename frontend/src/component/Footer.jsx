@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { BsFacebook, BsWhatsapp } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
-import { FaHackerrank } from 'react-icons/fa';
+import { FaSlack  } from 'react-icons/fa';
 const Footer = ({ socials }) => {
   return (
     <div className='footer' >
@@ -24,7 +24,7 @@ const Footer = ({ socials }) => {
             <li ><a href={socials.faceBook}><BsFacebook /></a></li>
             <li ><a href={socials.linkedIn}><BsLinkedin /></a></li>
             <li ><a href={socials.gitHub}><BsGithub /></a></li>
-            <li ><a href={socials.hackerRank}><FaHackerrank /></a></li>
+            <li ><a href={socials.hackerRank}><FaSlack /></a></li>
           </ul>
         </div>
         <div className='contact-no'>
